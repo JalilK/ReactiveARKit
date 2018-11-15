@@ -4,6 +4,8 @@ target 'ReactiveARKit_Example' do
   pod 'ReactiveARKit', :path => '../'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
+  pod 'RxOptional'
 
   target 'ReactiveARKit_Tests' do
     inherit! :search_paths
