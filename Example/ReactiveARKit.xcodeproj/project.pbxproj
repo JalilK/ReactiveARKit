@@ -16,6 +16,15 @@
 		AB9B615AF3B236B8C09867C8 /* Pods_ReactiveARKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C43DD1D9FB149B1E690766 /* Pods_ReactiveARKit_Example.framework */; };
 		B1BE1826216D55F900B5240A /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B1BE1825216D55F900B5240A /* Scene.sks */; };
 		B1BE1827216D55F900B5240A /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B1BE1825216D55F900B5240A /* Scene.sks */; };
+		B1FD6CD9219CBFE00062035D /* ExampleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CD8219CBFE00062035D /* ExampleSelectionViewController.swift */; };
+		B1FD6CDC219CC10F0062035D /* ExampleSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CDB219CC10F0062035D /* ExampleSelectionViewModel.swift */; };
+		B1FD6CDE219CC13C0062035D /* ExampleSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FD6CDD219CC13C0062035D /* ExampleSelection.storyboard */; };
+		B1FD6CE2219CC7460062035D /* ExampleSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CE1219CC7460062035D /* ExampleSelectionTableViewCell.swift */; };
+		B1FD6CE4219CC75A0062035D /* ExampleSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FD6CE3219CC75A0062035D /* ExampleSelectionTableViewCell.xib */; };
+		B1FD6CE7219CCC0D0062035D /* UIView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CE6219CCC0D0062035D /* UIView+Rx.swift */; };
+		B1FD6CE9219CCFD00062035D /* UITableView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CE8219CCFD00062035D /* UITableView+extensions.swift */; };
+		B1FD6CEC219DC30F0062035D /* DelegatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CEB219DC30F0062035D /* DelegatesViewController.swift */; };
+		B1FD6CEE219DC3220062035D /* DelegatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD6CED219DC3220062035D /* DelegatesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +55,15 @@
 		7F5C71C2C56BB054F96E4FB2 /* Pods-ReactiveARKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveARKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveARKit_Tests/Pods-ReactiveARKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8D56A16C38CD3F53EE3B6D3D /* Pods_ReactiveARKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveARKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BE1825216D55F900B5240A /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		B1FD6CD8219CBFE00062035D /* ExampleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSelectionViewController.swift; sourceTree = "<group>"; };
+		B1FD6CDB219CC10F0062035D /* ExampleSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSelectionViewModel.swift; sourceTree = "<group>"; };
+		B1FD6CDD219CC13C0062035D /* ExampleSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExampleSelection.storyboard; sourceTree = "<group>"; };
+		B1FD6CE1219CC7460062035D /* ExampleSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		B1FD6CE3219CC75A0062035D /* ExampleSelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		B1FD6CE6219CCC0D0062035D /* UIView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rx.swift"; sourceTree = "<group>"; };
+		B1FD6CE8219CCFD00062035D /* UITableView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extensions.swift"; sourceTree = "<group>"; };
+		B1FD6CEB219DC30F0062035D /* DelegatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatesViewController.swift; sourceTree = "<group>"; };
+		B1FD6CED219DC3220062035D /* DelegatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatesViewModel.swift; sourceTree = "<group>"; };
 		C26616FC53F9272C7087D1DC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DF29C0B33BBA53D649DBA33B /* ReactiveARKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ReactiveARKit.podspec; path = ../ReactiveARKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -94,6 +112,9 @@
 		607FACD21AFB9204008FA782 /* Example for ReactiveARKit */ = {
 			isa = PBXGroup;
 			children = (
+				B1FD6CEA219DC2F10062035D /* DelegatesViewController */,
+				B1FD6CE5219CCBF10062035D /* Extensions */,
+				B1FD6CDA219CC0E60062035D /* ExampleSelection */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -149,6 +170,36 @@
 				7F5C71C2C56BB054F96E4FB2 /* Pods-ReactiveARKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1FD6CDA219CC0E60062035D /* ExampleSelection */ = {
+			isa = PBXGroup;
+			children = (
+				B1FD6CD8219CBFE00062035D /* ExampleSelectionViewController.swift */,
+				B1FD6CDB219CC10F0062035D /* ExampleSelectionViewModel.swift */,
+				B1FD6CDD219CC13C0062035D /* ExampleSelection.storyboard */,
+				B1FD6CE1219CC7460062035D /* ExampleSelectionTableViewCell.swift */,
+				B1FD6CE3219CC75A0062035D /* ExampleSelectionTableViewCell.xib */,
+			);
+			name = ExampleSelection;
+			sourceTree = "<group>";
+		};
+		B1FD6CE5219CCBF10062035D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1FD6CE6219CCC0D0062035D /* UIView+Rx.swift */,
+				B1FD6CE8219CCFD00062035D /* UITableView+extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		B1FD6CEA219DC2F10062035D /* DelegatesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1FD6CEB219DC30F0062035D /* DelegatesViewController.swift */,
+				B1FD6CED219DC3220062035D /* DelegatesViewModel.swift */,
+			);
+			name = DelegatesViewController;
 			sourceTree = "<group>";
 		};
 		E7E5E8FD363C57835E611969 /* Frameworks */ = {
@@ -251,6 +302,8 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				B1FD6CDE219CC13C0062035D /* ExampleSelection.storyboard in Resources */,
+				B1FD6CE4219CC75A0062035D /* ExampleSelectionTableViewCell.xib in Resources */,
 				B1BE1826216D55F900B5240A /* Scene.sks in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -346,16 +399,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveARKit_Example/Pods-ReactiveARKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveARKit/ReactiveARKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveARKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,8 +429,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FD6CDC219CC10F0062035D /* ExampleSelectionViewModel.swift in Sources */,
+				B1FD6CEE219DC3220062035D /* DelegatesViewModel.swift in Sources */,
+				B1FD6CEC219DC30F0062035D /* DelegatesViewController.swift in Sources */,
+				B1FD6CE7219CCC0D0062035D /* UIView+Rx.swift in Sources */,
+				B1FD6CE9219CCFD00062035D /* UITableView+extensions.swift in Sources */,
+				B1FD6CE2219CC7460062035D /* ExampleSelectionTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B1FD6CD9219CBFE00062035D /* ExampleSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +595,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -546,6 +613,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
