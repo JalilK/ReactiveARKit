@@ -42,7 +42,7 @@ func session(_ session: ARSession, didUpdate frame: ARFrame) {
 ```
 Becomes this
 ```
-@IBOutlet weak var sceneView: ReactiveARSKView!
+@IBOutlet weak var sceneView: ARSKView!
 
 let disposeBag = DisposeBag()
 let viewModel = ViewModel()
