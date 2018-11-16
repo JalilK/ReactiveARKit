@@ -1,6 +1,6 @@
 # ReactiveARKit
 
-ReactiveARKit is an RxSwift framework that provides a custom ARSKView that emits it's events as Observable sequences. ReactiveARKit removes the need to implement ARSKViewDelegate and ARSessionDelegate methods as those delegate methods are emitted as events. You should not set the ARSKViewDelegate or ARSessionDelegate of a ReactiveARSKView. If you need to use your own delegate objects, you should use a regular ARSKView instead.
+ReactiveARKit is an RxSwift framework that provides `Reactive` extensions to `ARSKView` and `ARSession`. ReactiveARKit removes the need to implement ARSKViewDelegate and ARSessionDelegate methods as those delegate methods are emitted as events.
 
 <!---[![CI Status](https://img.shields.io/travis/jalilk/ReactiveARKit.svg?style=flat)](https://travis-ci.org/jalilk/ReactiveARKit)
 [![Version](https://img.shields.io/cocoapods/v/ReactiveARKit.svg?style=flat)](https://cocoapods.org/pods/ReactiveARKit)
@@ -45,6 +45,7 @@ Becomes this
 @IBOutlet weak var sceneView: ReactiveARSKView!
 
 let disposeBag = DisposeBag()
+let viewModel = ViewModel()
 
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -54,46 +55,35 @@ override func viewDidLoad() {
     // ...configuration setup
     sceneView.session.run(configuration)
     
-    setupObservers()
+    bindViewModel()
 }
 
 // MARK: ReactiveARSKView Observables
-func setupObservers() {
-  sceneView.didUpdateFrame.subscribe {
-      // Do something with latest frame
-  }.disposed(by: disposeBag)
+func bindViewModel() {
+  sceneView.didUpdateFrame.bind(to: viewModel.updateFrameRelay).disposed(by: disposeBag)
 }
 ```
 
 ReactiveARKit provides an Observable for every ARSessionDelegate and ARSKViewDelegate method as well as some convinience Observables.
-
-## Observing the start of a session
-```
-sceneView.sessionStarted.subscribe {
-    // Do something when ARSession starts
-}.disposed(by: disposeBag)
-
-```
-`sessionStarted` is a one off Observable sequence that emits a true event when the first frame of the `ARSession` is sent to the delegate. So you can use this to react to the start of an `ARSession`
 
 ## Observing specific ARAnchor events
 
 In addition to providing observable sequences for ARSessionDelegate and ARSKViewDelegate methods, ReactiveARKit also allows you to listen to `didAdd`, `willAdd`, `didUpdate` and `didRemove` events for specific `ARAnchor` sublcasses.
 
 ```
-sceneView.didAddARObjectAnchor.subscribe {
+sceneView.session.didAddARObjectAnchor.subscribe {
     // Do something with added ARObjectAnchor
 }.disposed(by: disposeBag)
 
-sceneView.willAddARObjectAnchor.subscribe {
+sceneView.session.willAddARObjectAnchor.subscribe {
     // Do something with ARObjectAnchor that is about to be added to the ARSession
 }.disposed(by: disposeBag)
 
-sceneView.didUpdateARObjectAnchor.subscribe {
+sceneView.session.didUpdateARObjectAnchor.subscribe {
     // Do something with ARObjectAnchor that has just been updated by the ARSession
 }.disposed(by: disposeBag)
 
-sceneView.didRemoveARObjectAnchor.subscribe {
+sceneView.session.didRemoveARObjectAnchor.subscribe {
     // Do something when ARObjectAnchor is removed from the ARSession
 }.disposed(by: disposeBag)
 ```
@@ -101,7 +91,7 @@ sceneView.didRemoveARObjectAnchor.subscribe {
 ReactiveARKit provides these types of Observable sequences for `ARImageAnchor`, `ARPlaneAnchor` and `ARFaceAnchor` as well.
 
 ```
-sceneView.didAddARPlaneAnchor.subscribe {
+sceneView.session.didAddARPlaneAnchor.subscribe {
     // Do something with ARPlaneAnchor
 }.disposed(by: disposeBag)
 
@@ -109,7 +99,7 @@ sceneView.didAddARPlaneAnchor.subscribe {
 ```
 
 ```
-sceneView.didAddARImageAnchor.subscribe {
+sceneView.session.didAddARImageAnchor.subscribe {
     // Do something with ARImageAnchor
 }.disposed(by: disposeBag)
 
@@ -117,7 +107,7 @@ sceneView.didAddARImageAnchor.subscribe {
 ```
 
 ```
-sceneView.didAddARFaceAnchor.subscribe {
+sceneView.session.didAddARFaceAnchor.subscribe {
     // Do something with ARFaceAnchor
 }.disposed(by: disposeBag)
 
